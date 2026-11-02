@@ -231,7 +231,7 @@ module Compression (
                                 file_size <= 32'd0;
                                 in_paren  <= 1'b1;
                             end
-                            else if (in_paren && (new_byte >= 8'h30) && (new_byte <= 8'h39)) // its '0'to '9'
+                            else if (in_paren && (new_byte >= 8'h30) && (new_byte <= 8'h39)) // its '0' to '9'
                                 file_size <= (file_size * 32'd10) + {28'd0, new_byte[3:0]};
                             else if (in_paren)                           // ' ' or ')' ends the number
                                 in_paren <= 1'b0;
