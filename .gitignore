@@ -7,3 +7,5 @@ simulation/
 *.rpt
 c5_pin_model_dump.txt
 *.rbf
+*.qpf
+*.qsf
