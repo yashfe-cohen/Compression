@@ -26,7 +26,7 @@ module Compression (
     wire [1:0] b_to_a_data; 
     wire       b_to_a_valid; 
 
-    // --- A RX to B TX ---
+    //  A RX to B TX 
     rmii_rx rx_from_a (
         .clk    (clk),
         .rst_n  (rst_n),
@@ -45,7 +45,7 @@ module Compression (
         .txd      (phyb_txd)
     );
 
-    // --- B RX to A TX ---
+    // B RX to A TX 
     rmii_rx rx_from_b (
         .clk    (clk),
         .rst_n  (rst_n),
